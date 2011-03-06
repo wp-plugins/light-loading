@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: loader,loading
 Requires at least: 2.0.2
 Tested up to: 3.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 Adds a customizable loading screen to your blog whenever a page loads.
 
@@ -28,4 +28,7 @@ Goto admin->Appearance->Light Loader->play with the settings
 
 = 1.0 =
 * Initial release
+= 1.1 =
+* Fixed conflict with admin page (Thanks to Thomas for the solution)
+
 

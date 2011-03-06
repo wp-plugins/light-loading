@@ -8,14 +8,16 @@ Plugin Name: Light Loading
 Plugin URI: http://light-loading.cdobiz.com/
 Description: Adds a loading screen to all the pages of your blog
 Author: Djane Rey Mabelin
-Version: 1.0
+Version: 1.1
 Author URI: http://blog.cdobiz.com
 */
 
 function light_loader_init(){
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, '');
-	wp_enqueue_script('jquery');
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false, '');
+		wp_enqueue_script('jquery');
+	}
 }
 add_action('init','light_loader_init');
 
